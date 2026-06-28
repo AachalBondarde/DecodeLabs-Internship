@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - StudyMantra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <span>StudyMantra</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="assistant.html">AI Assistant</a></li>
+        <li><a href="api-test.html">API Tester</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="darkModeBtn" class="dark-mode-btn" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="dashboard-page">
+    <section class="dashboard-grid">
+      <div>
+        <div class="profile-card">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Profile">
+          <h2>Maria John</h2>
+          <p>Computer Science Student</p>
+          <div class="profile-tags">
+            <span>Frontend</span>
+            <span>AI</span>
+            <span>Project-Based Learning</span>
+          </div>
+          <div class="profile-meta">
+            <p><strong id="profileStudentCount">0</strong> Total learners</p>
+            <p><strong id="profileCourseCount">0</strong> Unique courses</p>
+          </div>
+        </div>
+
+        <div class="panel-block">
+          <div class="panel-header">
+            <h3>Courses Enrolled</h3>
+          </div>
+          <div class="course-list">
+            <div class="course-item"><div><h4>Web Development</h4><p>4 modules left</p></div><span>90%</span></div>
+            <div class="course-item"><div><h4>Data Analytics</h4><p>2 modules left</p></div><span>68%</span></div>
+            <div class="course-item"><div><h4>Prompt Engineering</h4><p>1 module left</p></div><span>82%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="panel-block">
+          <div class="panel-header">
+            <h3>Certificates</h3>
+          </div>
+          <div class="recommended-list">
+            <div class="recommended-item"><h4>React Fundamentals</h4><p>Earned May 2026</p></div>
+            <div class="recommended-item"><h4>AI Essentials</h4><p>Earned April 2026</p></div>
+            <div class="recommended-item"><h4>Data Visualization</h4><p>Earned March 2026</p></div>
+          </div>
+        </div>
+
+        <div class="panel-block">
+          <div class="panel-header">
+            <h3>Learning Progress</h3>
+          </div>
+          <div class="course-list">
+            <div class="course-item"><div><h4>Web Development</h4></div><span>90%</span></div>
+            <div class="course-item"><div><h4>Python</h4></div><span>76%</span></div>
+            <div class="course-item"><div><h4>Machine Learning</h4></div><span>63%</span></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

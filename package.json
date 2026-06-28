@@ -1,0 +1,14 @@
+{
+  "name": "student-management-api",
+  "version": "1.0.0",
+  "description": "Simple Student Management API built with Express and SQLite",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  }
+}
