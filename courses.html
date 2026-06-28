@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - StudyMantra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <span>StudyMantra</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="assistant.html">AI Assistant</a></li>
+        <li><a href="api-test.html">API Tester</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="darkModeBtn" class="dark-mode-btn" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-header" data-aos="fade-up">
+      <span class="eyebrow">Learning Catalog</span>
+      <h1>Explore Courses</h1>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search courses, topics, or skills">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+    </section>
+
+    <section class="cards section">
+      <article class="card course-card" data-category="development" data-aos="fade-up">
+        <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Build modern websites using HTML, CSS, JavaScript and React.</p>
+        <div class="meta-row"><span>Beginner</span><span>8h 30m</span></div>
+        <button class="btn">Enroll</button>
+      </article>
+      <article class="card course-card" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon"><i class="fas fa-brain"></i></div>
+        <h3>Python for AI</h3>
+        <p>Master Python fundamentals and data workflows for AI projects.</p>
+        <div class="meta-row"><span>Intermediate</span><span>12h</span></div>
+        <button class="btn">Enroll</button>
+      </article>
+      <article class="card course-card" data-category="data" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Data Analytics</h3>
+        <p>Turn raw data into actionable insights with SQL and Power BI.</p>
+        <div class="meta-row"><span>Beginner</span><span>10h</span></div>
+        <button class="btn">Enroll</button>
+      </article>
+      <article class="card course-card" data-category="design" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-icon"><i class="fas fa-palette"></i></div>
+        <h3>UI/UX Essentials</h3>
+        <p>Design user-centered products with prototyping and research.</p>
+        <div class="meta-row"><span>Beginner</span><span>9h</span></div>
+        <button class="btn">Enroll</button>
+      </article>
+      <article class="card course-card" data-category="development" data-aos="fade-up">
+        <div class="card-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud Computing</h3>
+        <p>Understand AWS, Azure, and deployment workflows for teams.</p>
+        <div class="meta-row"><span>Intermediate</span><span>11h</span></div>
+        <button class="btn">Enroll</button>
+      </article>
+      <article class="card course-card" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Cybersecurity Basics</h3>
+        <p>Learn security foundations, threats, and defensive practices.</p>
+        <div class="meta-row"><span>Beginner</span><span>7h</span></div>
+        <button class="btn">Enroll</button>
+      </article>
+    </section>
+  </main>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

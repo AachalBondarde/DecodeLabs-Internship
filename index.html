@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMantra | Learn Smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <span>StudyMantra</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="assistant.html">AI Assistant</a></li>
+        <li><a href="api-test.html">API Tester</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="darkModeBtn" class="dark-mode-btn" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="hero-content" data-aos="fade-up">
+        <span class="eyebrow">AI-powered learning platform</span>
+        <h1>Learn Smarter with <span>AI-Powered Education</span></h1>
+        <p>Personalized learning paths, interactive courses, and intelligent study assistance designed to help you grow faster.</p>
+        <div class="hero-buttons">
+          <a href="courses.html" class="btn">Start Learning</a>
+          <a href="api-test.html" class="btn btn-secondary">Try API Demo</a>
+        </div>
+        <div class="hero-trust">
+          <div><strong>4.9/5</strong><span>Average rating</span></div>
+          <div><strong>50+</strong><span>Live cohorts</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="dashboard-preview">
+          <div class="preview-top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-sidebar"></div>
+            <div class="preview-main">
+              <div class="preview-card large"></div>
+              <div class="preview-grid">
+                <div class="preview-card"></div>
+                <div class="preview-card"></div>
+                <div class="preview-card wide"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section student-crud-section" id="studentCrud">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">Student Manager</span>
+        <h2>Manage course records</h2>
+      </div>
+      <div class="crud-panel" data-aos="fade-up">
+        <div class="crud-form-panel">
+          <form id="studentForm" class="crud-form">
+            <input type="hidden" id="studentId">
+            <div class="form-group">
+              <label for="studentName">Name</label>
+              <input type="text" id="studentName" placeholder="Enter student name" required>
+            </div>
+            <div class="form-group">
+              <label for="studentCourse">Course</label>
+              <input type="text" id="studentCourse" placeholder="Enter course" required>
+            </div>
+            <div class="form-group">
+              <label for="studentYear">Year</label>
+              <input type="number" id="studentYear" min="1" max="6" placeholder="1-6" required>
+            </div>
+            <div class="crud-actions">
+              <button type="submit" class="btn" id="submitBtn">Add Student</button>
+              <button type="button" class="btn btn-secondary" id="cancelEditBtn" hidden>Cancel</button>
+            </div>
+          </form>
+          <p id="crudStatus" class="crud-status"></p>
+        </div>
+        <div class="crud-table-panel">
+          <div class="crud-table-wrap">
+            <table class="crud-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Course</th>
+                  <th>Year</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="studentTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section">
+      <div class="stat-card" data-aos="zoom-in">
+        <h2 id="studentsStatCounter" class="counter" data-target="10000" data-suffix="+">0</h2>
+        <p>Students</p>
+      </div>
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+        <h2 class="counter" data-target="500" data-suffix="+">0</h2>
+        <p>Courses</p>
+      </div>
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+        <h2 class="counter" data-target="100" data-suffix="+">0</h2>
+        <p>Mentors</p>
+      </div>
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+        <h2 class="counter" data-target="98" data-suffix="%">0</h2>
+        <p>Satisfaction</p>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">Featured Courses</span>
+        <h2>Popular learning paths</h2>
+      </div>
+      <div class="cards">
+        <article class="card course-card" data-aos="fade-up">
+          <div class="card-icon"><i class="fas fa-code"></i></div>
+          <h3>Full-Stack Development</h3>
+          <p>HTML, CSS, JavaScript, React, backend fundamentals.</p>
+          <div class="meta-row"><span>12 lessons</span><span>4.9</span></div>
+          <button class="btn">Enroll Now</button>
+        </article>
+        <article class="card course-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Data Analytics</h3>
+          <p>SQL, Python, dashboards, and business intelligence.</p>
+          <div class="meta-row"><span>18 lessons</span><span>4.8</span></div>
+          <button class="btn">Enroll Now</button>
+        </article>
+        <article class="card course-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI & Machine Learning</h3>
+          <p>Learn models, data pipelines, and practical AI use cases.</p>
+          <div class="meta-row"><span>22 lessons</span><span>4.9</span></div>
+          <button class="btn">Enroll Now</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">Why learners choose us</span>
+        <h2>Everything you need to stay ahead</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card" data-aos="fade-up">
+          <i class="fas fa-user-graduate"></i>
+          <h3>Expert Mentors</h3>
+          <p>Learn directly from professionals shaping the future of tech.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-robot"></i>
+          <h3>AI Recommendations</h3>
+          <p>Get tailored study plans and insights based on your progress.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-certificate"></i>
+          <h3>Verified Certificates</h3>
+          <p>Showcase your achievements with credentials recognized by teams.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What our learners say</h2>
+      </div>
+      <div class="testimonials">
+        <article class="testimonial-card" data-aos="fade-up">
+          <div class="stars">★★★★★</div>
+          <p>“The AI study assistant helped me understand difficult topics in a fraction of the time.”</p>
+          <div class="user-info"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Student"><span>Sarah K.</span></div>
+        </article>
+        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stars">★★★★★</div>
+          <p>“The dashboard and progress tracking made it effortless to stay consistent with my goals.”</p>
+          <div class="user-info"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Student"><span>Michael R.</span></div>
+        </article>
+        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stars">★★★★★</div>
+          <p>“The course quality and mentorship support are exceptional. I’ve already recommended it to friends.”</p>
+          <div class="user-info"><img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80" alt="Student"><span>Anika P.</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pricing-section">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">Pricing</span>
+        <h2>Choose your learning plan</h2>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card" data-aos="fade-up">
+          <h3>Free</h3>
+          <p class="price">$0<span>/mo</span></p>
+          <ul>
+            <li>Access to 3 courses</li>
+            <li>Basic AI assistant</li>
+            <li>Weekly progress summary</li>
+          </ul>
+          <a href="#" class="btn btn-secondary">Get Started</a>
+        </article>
+        <article class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+          <span class="tag">Most Popular</span>
+          <h3>Pro</h3>
+          <p class="price">$19<span>/mo</span></p>
+          <ul>
+            <li>Unlimited courses</li>
+            <li>Advanced AI tutor</li>
+            <li>Certificates & analytics</li>
+          </ul>
+          <a href="#" class="btn">Start Pro</a>
+        </article>
+        <article class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Enterprise</h3>
+          <p class="price">Custom</p>
+          <ul>
+            <li>Team onboarding</li>
+            <li>Dedicated support</li>
+            <li>Custom learning paths</li>
+          </ul>
+          <a href="#" class="btn btn-secondary">Contact Sales</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="section-header" data-aos="fade-up">
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item active" data-aos="fade-up">
+          <button class="faq-question">How does the AI assistant work?<span>+</span></button>
+          <div class="faq-answer"><p>It provides study explanations, quiz help, summaries, and smart recommendations based on your course progress.</p></div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-question">Can I switch between courses anytime?<span>+</span></button>
+          <div class="faq-answer"><p>Yes, you can pause, resume, and switch between courses from your dashboard whenever you want.</p></div>
+        </div>
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+          <button class="faq-question">Do you offer certificates?<span>+</span></button>
+          <div class="faq-answer"><p>Every completed learning path includes a certificate you can add to your profile and share online.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a href="index.html" class="logo footer-logo">StudyMantra</a>
+      <p>© 2026 StudyMantra. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
